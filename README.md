@@ -2,5 +2,5 @@
 Web Development with HTML and CSS
 # CSD 340 Web Devleopment with HTML and CSS
 ## Contributors 
-- *Dr. Joseph Issa
-- *Vanh Somchaleun
+- Dr. Joseph Issa
+- Vanh Somchaleun
