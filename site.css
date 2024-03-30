@@ -1,0 +1,42 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Reset default margin and padding */
+body, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply font-family */
+body {
+	font-family: "Open Sans", sans-serif; 
+}
+
+/* Styles for #container */
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Styles for headings */
+h1, h2, h3, h4 {
+    background-color: #EAF6FD; /* Light blue background */
+    color: #333; /* Font color that contrasts well with the background */
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+
+/* Styles for anchor tags */
+a {
+    color: #337AB7; /* Color that blends with your color scheme */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1356A2; /* Color on hover that blends with your color scheme */
+}
+
+a:visited {
+    color: #764BA2; /* Color for visited links that blends with your color scheme */
+}
