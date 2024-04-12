@@ -1,0 +1,99 @@
+/* Styles for the header element */
+header {
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    padding: 20px; /* Padding of 20px */
+    text-align: center; /* Center-align the text */
+}
+
+/* Styles for the h1 element */
+h1 {
+    font-weight: 400; /* Set font weight to 400 */
+}
+
+/* Styles for the navbar element */
+#navbar {
+    overflow: hidden; /* Set overflow to hidden */
+    background-color: navy; /* Navy blue background color */
+    border-bottom: 15px solid #ffd700; /* Solid bottom border with light gold color */
+}
+
+/* Styles for the navbar links */
+#navbar a {
+    float: left; /* Float the text to the left */
+    display: block; /* Set display to block */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 14px 16px; /* Padding of 14px top/bottom and 16px left/right */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Styles for the navbar links on hover */
+#navbar a:hover {
+    background-color: #ffe4b5; /* Light beige background color on hover */
+    color: #999; /* Lighter grey text color on hover */
+}
+
+/* Styles for the container element */
+#container {
+    margin-top: 2%; /* Set top margin to 2% */
+    margin-left: 5%; /* Set left margin to 5% */
+    margin-right: 5%; /* Set right margin to 5% */
+    padding: 10px; /* Padding of 10px */
+}
+
+/* Styles for the card element */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Set box shadow */
+    transition: 0.3s; /* Set transition */
+    width: 50%; /* Set width to 50% */
+}
+
+/* Styles for the card-title element */
+.card-title {
+    text-align: center; /* Center the text */
+    font-size: 2em; /* Set font size to 2em */
+    color: #333; /* Dark gray text color */
+    font-weight: 400; /* Set font weight to 400 */
+}
+
+/* Styles for the card-content element */
+.card-content {
+    padding: 2px 16px; /* Set padding to 2px top/bottom and 16px left/right */
+}
+
+/* Styles for the footer element */
+footer {
+    background-color: #007bff; /* Same color as the header */
+    position: absolute; /* Set position to absolute */
+    bottom: 0; /* Align the footer to the bottom */
+    width: 100%; /* Set width to 100% */
+    color: white; /* White text color */
+}
+
+/* Styles for paragraph elements within the footer */
+footer p {
+    color: white; /* White text color */
+    font-weight: 400; /* Set font weight to 400 */
+    float: right; /* Float the text to the right */
+    padding-right: 10px; /* Right padding of 10px */
+    font-style: italic; /* Set font style to italic */
+	padding: 14px 16px; /* Padding of 14px top/bottom and 16px left/right */
+
+}
+
+/* Styles for anchor elements within the footer */
+footer a {
+    text-decoration: none; /* Remove the underline */
+    color: white !important; /* White text color */
+}
+
+/* Styles for anchor elements within the footer when hovered over */
+footer a:hover {
+    text-decoration: underline; /* Underline the text */
+}
+
+/* Styles for the "back to Landing Page" link in the footer */
+footer a.back-to-landing {
+    color: white; /* Set color to white */
+}
