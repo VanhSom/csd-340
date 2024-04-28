@@ -1,0 +1,57 @@
+<!-- Vanh Somchaleun : Assignment 9.3 -->
+<!-- https://github.com/VanhSom/csd-340.git -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="JavaScript - Part 1">
+    <meta name="author" content="Vanh Somchaleun">
+    <title>CSD 340 Development with HTML and CSS</title>
+
+    <script>
+        function replaceWord(id, word) {
+            document.getElementById(id).textContent = word;
+        }
+    </script>  
+</head>
+
+<body>
+    
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+    <h2>"The Raven" by Edgar Allan Poe</h2>
+    <h3>The First Three Stanzas:</h3>
+    
+    <p>Once upon a midnight <span id="word1">______</span>, while I pondered, weak and weary,
+        Over many a quaint and curious volume of forgotten lore—
+        While I nodded, nearly napping, suddenly there came a tapping,
+        As of some one gently rapping, rapping at my chamber door.
+        “’Tis some visitor,” I muttered, “tapping at my chamber door—
+        Only this and nothing more.”
+    </p>
+
+    <button onclick="replaceWord('word1', 'dreary')">dreary</button>    
+
+    <p>Ah, distinctly I remember it was in the bleak December;
+        And each separate dying ember wrought its ghost upon the floor.
+        Eagerly I wished the morrow;—vainly I had sought to borrow
+        From my books <span id="word2">______</span> of sorrow—sorrow for the lost Lenore—
+        For the rare and radiant maiden whom the angels name Lenore—
+        Nameless here for evermore
+    </p>
+
+    <button onclick="replaceWord('word2', 'surcease')">surcease</button>
+        
+    <p>And the silken, sad, uncertain <span id="word3">______</span> rustling of each purple curtain
+        Thrilled me—filled me with fantastic terrors never felt before;
+        So that now, to still the beating of my <span id="word4">______</span> heart, I stood repeating
+        “’Tis some visitor entreating entrance at my chamber door—
+        Some late visitor entreating entrance at my chamber door;—
+        This it is and nothing more.”
+    </P>
+    <button onclick="replaceWord('word3', 'gentle')">gentle</button>
+    <button onclick="replaceWord('word4', 'throbbing')">throbbing</button>
+
+</body>
+</html>
+
