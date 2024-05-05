@@ -1,0 +1,95 @@
+<!-- Vanh Somchaleun : Assignment 10.3 -->
+<!-- https://github.com/VanhSom/csd-340.git -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title and author metadata -->
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="author" content="Vanh Somchaleun">
+    
+    <!-- JavaScript function for image display -->
+    <script>
+        function displayImage(imageFile){
+            var largerImage = document.getElementById("mainImage");
+            var newNode = document.createElement("img");
+            newNode.id = "mainImage";
+            newNode.src = imageFile;
+            newNode.alt = "Large Image";
+            newNode.className = "mainImage";
+            newNode.style.width = "300px";
+            newNode.style.height = "200px";
+            largerImage.parentNode.replaceChild(newNode, largerImage);
+        }
+        
+        // JavaScript function to handle click event on images
+        function handleClick(imageFile) {
+            if (imageFile === 'images/liberty_01.jpg') {
+                // If Liberty image is clicked
+                var facts = "The Statue of Liberty is a symbol of freedom and democracy. ";
+                facts += "It was a gift from France to the United States and was dedicated on October 28, 1886. ";
+                facts += "The statue is located on Liberty Island in New York Harbor.";
+                alert(facts);
+            } else if (imageFile === 'images/face_01.jpg') {
+                // If Face image is clicked
+                var explanation = "When the background color changes from black to red, it creates a strong ";
+                explanation += "contrast because red is a vibrant color that stands out against black. ";
+                explanation += "Similarly, when the face color changes from green to blue, it creates a contrast ";
+                explanation += "because blue is a cool color that contrasts with the warmer green.";
+                alert(explanation);
+            }
+            // Add more conditions for other images if needed
+        }
+    </script>
+
+    <!-- External stylesheet link -->
+    <link rel='stylesheet' type='text/css' href='body1.css' />
+</head>
+
+<body>
+    <!-- Header -->
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    
+    <!-- Image links with mouseover effects -->
+    <div>
+        <a href="#" onclick="handleClick('images/liberty_01.jpg');"
+           onmouseover="liberty.src='images/liberty_01.jpg';"
+           onmouseout="liberty.src='images/liberty_02.jpg';">
+            <img border="0" name="liberty" src="images/liberty_02.jpg">
+        </a>
+    </div>
+    <br />
+    
+    <!-- Text section with mouseover effect -->
+    <div onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">
+        Run your mouse over the image to change.
+        <br />
+        Click on each picture to learn more about the image!
+    </div>
+    
+    <br>
+
+    <!-- Another image link with mouseover effects -->
+    <div>
+        <a href="#" onclick="handleClick('images/face_01.jpg');"
+           onmouseover="face.src='images/face_01.jpg';"
+           onmouseout="face.src='images/face_02.jpg';">
+            <img border="0" name="face" src="images/face_02.jpg">
+        </a>
+    </div>
+    <br />
+    
+    <!-- Another text section with mouseover effect -->
+    <div onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">
+        Run your mouse over the image to change.
+        <br />
+        Click on each picture to learn more about the image! 
+    </div>
+</body>
+</html>
+
+
