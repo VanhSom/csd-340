@@ -1,0 +1,86 @@
+<!-- Vanh Somchaleun : Assignment 11.2 -->
+<!-- https://github.com/VanhSom/csd-340.git -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="author" content="Vanh Somchaleun">
+    <style>
+        /* Style to remove bullets and change display format */
+        #entryList {
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove default padding */
+            border-top: 1px solid #000; /* Add a solid black border on top of the list */
+        }
+        #entryList li {
+            padding: 5px; /* Add some padding for better appearance */
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    
+    <p>This program allows you to add, delete, and display items in a list. Enter text into the input field and click "Add" to add it to the list. You can then select an item from the list and click "Delete Selected Entry" to remove it. Clicking "Display" will show the current list of items.</p>
+
+    <input type="text" id="entryInput">
+    <button onclick="addEntry()">Add</button>
+    <select id="deleteSelect"></select>
+    <button onclick="deleteSelectedEntry()">Delete Selected Entry</button>
+    <button onclick="displayEntries()">Display</button>
+
+    <ul id="entryList"></ul>
+
+    <script>
+        let entries = [];
+
+        function addEntry() {
+            let entryInput = document.getElementById("entryInput").value;
+            if (entryInput !== "") {
+                entries.push(entryInput);
+                document.getElementById("entryInput").value = ""; // Clear the input field after adding
+                let addedAt = entries.length; // Index where the text was added
+                alert("Added: " + entryInput + " at position " + addedAt);
+                updateDeleteSelect();
+            }
+        }
+
+        function updateDeleteSelect() {
+            let deleteSelect = document.getElementById("deleteSelect");
+            deleteSelect.innerHTML = ""; // Clear previous options
+
+            for (let i = 0; i < entries.length; i++) {
+                let option = document.createElement("option");
+                option.text = entries[i];
+                deleteSelect.add(option);
+            }
+        }
+
+        function deleteSelectedEntry() {
+            let deleteSelect = document.getElementById("deleteSelect");
+            let selectedIndex = deleteSelect.selectedIndex;
+
+            if (selectedIndex !== -1) {
+                let deletedEntry = entries.splice(selectedIndex, 1)[0]; // Remove the selected entry from the array
+                alert("Deleted: " + deletedEntry);
+                updateDeleteSelect();
+            }
+        }
+
+        function displayEntries() {
+            let entryList = document.getElementById("entryList");
+            entryList.innerHTML = ""; // Clear previous entries
+
+            for (let i = 0; i < entries.length; i++) {
+                let li = document.createElement("li");
+                li.textContent = "Item " + (i + 1) + " = " + entries[i]; // Displaying items starting with 1
+                entryList.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>
+
+
