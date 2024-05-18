@@ -1,0 +1,59 @@
+User
+/* Center the h1 title */
+h1 {
+    text-align: center;
+}
+
+/* Set width of side-by-side divs */
+.side-by-side {
+    width: 45%;
+}
+
+/* Set width of last div to 100% */
+.full-width-div {
+    width: 100%;
+    margin-top: 60px; /* Margin-top of 60% */
+}
+
+/* Set font weight of h3 tags */
+h3 {
+    font-weight: 500;
+}
+
+/* Set font weight of lists */
+ol,
+ul {
+    font-weight: 300;
+}
+
+/* Style ordered list */
+ol {
+    list-style: none;
+}
+
+/* Style unordered list */
+ul {
+    list-style: upper-roman;
+}
+
+
+/* Apply hover effect to links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style the list container */
+.list-container {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* Style the bottom div */
+.full-width-div {
+    float: right;
+    margin-bottom: 20px;
+}  add the footer to be floating
+
+
+

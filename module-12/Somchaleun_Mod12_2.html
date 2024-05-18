@@ -1,0 +1,133 @@
+<!-- Vanh Somchaleun : Assignment 3.3 -->
+<!-- https://github.com/VanhSom/csd-340.git -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Somchaleun_Mod12_2.css" type="text/css">
+    <style>
+        .back-link {
+            float: right;
+        }
+		
+		.side-by-side {
+            width: 45%;
+            display: inline-block;
+            vertical-align: top; /* Adjust vertical alignment as needed */
+		}	
+
+        .full-width-div {
+            width: 100%;
+			margin-top: 60%;
+        }
+		
+		.list-container {
+			margin-bottom: 20px; /* Added margin to separate the lists */
+		}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        <div class="side-by-side">
+            <div class="left-div">
+                <div class="list-container">
+                    <h3>Top 10 Favorite Books</h3>
+                    <button onclick="sortTopToBottom()">Top to Bottom</button>
+                    <button onclick="sortBottomToTop()">Bottom to Top</button>
+                    <ol id="top-ten-books-list"></ol>
+                </div>
+            </div>
+        </div>
+        <div class="side-by-side">
+            <div class="right-div">
+                <div class="list-container">
+                    <h3>5 Things I’ve Learned Since the Course Started</h3>
+                    <ul>
+                        <li>I've learned how to structure web pages using HTML.</li>
+                        <li>I've gained knowledge of CSS Styling and how to apply styles to HTML elements.</li>
+                        <li>Focus on creating website designs that are easy to navigate. </li>
+                        <li>Discovering Google Fonts and adding different font families to the CSS styles.</li>
+                        <li>I've learned how to use browser developer tools to debug my HTML and CSS code.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="full-width-div">
+            <a href="/csd-340" class="back-link">Back to Landing Page</a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript array containing the top ten books
+        const topTenBooks = [
+            "A Song of Ice and Fire",
+            "Dune",
+            "The Chronicles of Narnia",
+            "The Hobbit",
+            "Ready Player One",
+            "The Hunt for Red October",
+            "The Lord of the Rings",
+            "Harry Potter Series",
+            "Watchmen",
+            "Sandman"
+        ];
+
+        // Function to populate the top ten books list
+        function populateTopTenBooks(order) {
+            const topTenBooksList = document.getElementById("top-ten-books-list");
+            topTenBooksList.innerHTML = ""; // Clear existing list
+            topTenBooks.forEach((book, index) => {
+                const listItem = document.createElement("li");
+                const displayIndex = order === 'asc' ? index + 1 : topTenBooks.length - index;
+                listItem.textContent = `${displayIndex}. ${book}`;
+                topTenBooksList.appendChild(listItem);
+            });
+        }
+
+        // Function to sort the top ten books from top to bottom
+        function sortTopToBottom() {
+            topTenBooks.sort((a, b) => a.localeCompare(b)); // Sort the array alphabetically
+            populateTopTenBooks('asc'); // Re-populate the list in ascending order
+        }
+
+        // Function to sort the top ten books from bottom to top
+        function sortBottomToTop() {
+            topTenBooks.sort((a, b) => b.localeCompare(a)); // Sort the array alphabetically in descending order
+            populateTopTenBooks('desc'); // Re-populate the list in descending order
+        }
+
+        // Initial population of the top ten books list
+        populateTopTenBooks('asc');
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
